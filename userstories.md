@@ -53,3 +53,18 @@ Verbs: decision to use, see what is docked
 ### Object Message Communication
 
 bike <-----     dock   --->   DockingStation
+
+### User Story 5
+As a maintainer of the system,
+So that I can control the distribution of bikes,
+I'd like docking stations not to accept more bikes than their capacity.
+
+| Objects | Messages |
+|  --------|---------|
+|   maintainer|       |
+|docking station| full? |
+|bike     |       |
+
+### Object Message Communication
+
+bike <----- if capacity >= 20 then full -------> docking station
