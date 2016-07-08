@@ -9,11 +9,15 @@ class DockingStation
 
   def release_bike
     fail 'No bikes available' unless @bike
-    @bike 
+    @bike
   end
 
   def dock(bike)
-    @bike = bike
+    if @bike
+      fail 'Docking station is full'
+    else
+      @bike = bike
+    end
   end
 
   # def bike
