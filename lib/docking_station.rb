@@ -9,12 +9,13 @@ class DockingStation
   end
 
   def release_bike
-    fail 'No bikes available' if empty?
-    bikes.pop
+    working_bikes = bikes.select {|bike| (unless bike.broken? then bike end)}
+    fail 'No bikes available' if working_bikes.count == 0
+    working_bikes.pop
   end
 
   def dock(bike)
-    fail 'Docking station is full' if full?
+    fail 'Docking station full' if full?
     bikes << bike
     bikes[0]
   end
@@ -22,17 +23,13 @@ class DockingStation
   private
 
   attr_reader :bikes
-  
+
   def full?
-    if bikes.length >= @capacity
-    true
-    end
+    bikes.count >= @capacity
   end
 
   def empty?
-    if bikes.empty?
-    true
-    end
+    bikes.empty?
   end
 
 end

@@ -68,3 +68,21 @@ I'd like docking stations not to accept more bikes than their capacity.
 ### Object Message Communication
 
 bike <----- if capacity >= 20 then full -------> docking station
+
+### User Story 6
+
+As a member of the public,
+So that I reduce the chance of getting a broken bike in future,
+I'd like to report a bike as broken when I return it.
+
+### User Story 7
+
+As a maintainer of the system,
+So that I can manage broken bikes and not disappoint users,
+I'd like docking stations not to release broken bikes.
+
+### User Story 8
+
+As a maintainer of the system,
+So that I can manage broken bikes and not disappoint users,
+I'd like docking stations to accept returning bikes (broken or not).

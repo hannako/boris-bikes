@@ -1,8 +1,11 @@
 require 'bike'
-describe Bike do
-  it {is_expected.to respond_to (:working?)}
 
-it 'responds to the method .working?' do
-expect(subject).to respond_to :working?
-end
+describe Bike do
+  subject(:bike) { Bike.new }
+
+  it 'can be reported that the bike is broken' do
+    bike.report_broken
+    expect(bike).to be_broken
+  end
+
 end
