@@ -1,11 +1,15 @@
 require 'bike'
 
 describe Bike do
-  subject(:bike) { Bike.new }
+  let(:bike) { Bike.new }
 
-  it 'can be reported that the bike is broken' do
-    bike.report_broken
-    expect(bike).to be_broken
-  end
+it 'is working when it is created as a default' do
+  expect(bike.working?).to be true
+end
+
+it 'can be reported broken' do
+  bike.report_broken
+  expect(bike.working?).to be false
+end
 
 end
