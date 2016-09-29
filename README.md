@@ -1,6 +1,6 @@
 # Boris Bikes
 
-Makers Academy Week One Project
+Makers Academy Week One Project. Switch to branch consolidation.
 
 ## Challenge
 
